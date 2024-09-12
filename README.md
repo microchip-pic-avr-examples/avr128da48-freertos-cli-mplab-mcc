@@ -1,51 +1,114 @@
-<!-- Please do not change this logo with link -->
+<a href="https://www.microchip.com" rel="nofollow"><img src="images/microchip.png" alt="MCHP" width="300"/></a>
 
-<a target="_blank" href="https://www.microchip.com/" id="top-of-page">
-   <picture>
-      <source media="(prefers-color-scheme: light)" srcset="images/mchp_logo_light.png" width="350">
-      <source media="(prefers-color-scheme: dark)" srcset="images/mchp_logo_dark.png" width="350">
-      <img alt="Microchip Technologies Inc." src="https://www.microchip.com/content/experience-fragments/mchp/en_us/site/header/master/_jcr_content/root/responsivegrid/header/logo.coreimg.100.300.png/1605828081463/microchip.png">
-   </picture>
-</a>
+# CLI Example Using AVR DA Microcontroller and FreeRTOS with MCC Melody
 
-# Update the title for avr128da48-freertos-cli-mplab-mcc here
 
-<!-- This is where the introduction to the example goes, including mentioning the peripherals used -->
+This repository provides an FreeRTOS CLI example MPLAB® X project using MPLAB Code Configurator (MCC). The MCC Melody generated project offers a seamless integration of the FreeRTOS kernel files and port files, by providing a basic project structure that can be used as starting point for an RTOS application.
+
 
 ## Related Documentation
 
-<!-- Any information about an application note or tech brief can be linked here. Use unbreakable links!
-     In addition a link to the device family landing page and relevant peripheral pages as well:
-     - [AN3381 - Brushless DC Fan Speed Control Using Temperature Input and Tachometer Feedback](https://microchip.com/00003381/)
-     - [PIC18F-Q10 Family Product Page](https://www.microchip.com/design-centers/8-bit/pic-mcus/device-selection/pic18f-q10-product-family) -->
+More details and code examples on the AVR128DA48 can be found at the following links:
+
+- [FreeRTOS™ pages](https://www.freertos.org/index.html)
+- [FreeRTOS Demo for the Microchip AVR® Dx Port](https://www.freertos.org/microchip-avr-dx-demo.html)
+- [AVR128DA48 Product Page](https://www.microchip.com/wwwproducts/en/AVR128DA48?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_AVR-DA&utm_content=avr128da48-freertos-cli-mplab-mcc-github&utm_bu=MCU08)
+- [AVR128DA48 Code Examples on GitHub](https://github.com/microchip-pic-avr-examples?q=AVR128DA48)
 
 ## Software Used
-
-<!-- All software used in this example must be listed here. Use unbreakable links!
-     - MPLAB® X IDE 5.30 or newer [(microchip.com/mplab/mplab-x-ide)](http://www.microchip.com/mplab/mplab-x-ide)
-     - MPLAB® XC8 2.10 or a newer compiler [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
-     - MPLAB® Code Configurator (MCC) 3.95.0 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - MPLAB® Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - Microchip PIC18F-Q Series Device Support (1.4.109) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/) -->
-
-- MPLAB® X IDE 6.20.0 or newer [(MPLAB® X IDE 6.20)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide)
-- MPLAB® XC8 2.46.0 or newer compiler [(MPLAB® XC8 2.46)](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers/xc8)
+- [MPLAB X IDE 6.20 or newer](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_AVR-DA&utm_content=avr128da48-freertos-cli-mplab-mcc-github&utm_bu=MCU08)
+- [MPLAB XC8 2.46 or a newer compiler](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_AVR-DA&utm_content=avr128da48-freertos-cli-mplab-mcc-github&utm_bu=MCU08)
+- [MPLAB Code Configurator (MCC) 5.7.1 or newer](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_AVR-DA&utm_content=avr128da48-freertos-cli-mplab-mcc-github&utm_bu=MCU08)
+- [AVR-Dx 2.6.303 or newer Device Pack](https://packs.download.microchip.com/#collapse-Microchip-AVR-Dx-DFP-pdsc)
+- FreeRTOS Library - 2.0.1
+- AVR Devices package 4.11.0 or newer
 
 ## Hardware Used
 
-<!-- All hardware used in this example must be listed here. Use unbreakable links!
-     - PIC18F47Q10 Curiosity Nano [(DM182029)](https://www.microchip.com/Developmenttools/ProductDetails/DM182029)
-     - Curiosity Nano Base for Click boards™ [(AC164162)](https://www.microchip.com/Developmenttools/ProductDetails/AC164162)
-     - POT Click board™ [(MIKROE-3402)](https://www.mikroe.com/pot-click) -->
+- The [AVR128DA48 Curiosity Nano Evaluation Kit](https://www.microchip.com/en-us/development-tool/DM164151) is used as a test platform:
+<br><img src="images/avr128da48_cnano.PNG" width="600">
 
-## Setup
-
-<!-- Explain how to connect hardware and set up software. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
 
 ## Operation
 
-<!-- Explain how to operate the example. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
+To program the Curiosity Nano board with this MPLAB X project, follow the steps provided in the [How to Program the Curiosity Nano Board](#how-to-program-the-curiosity-nano-board) chapter.<br><br>
+
+
+## Setup
+
+Before programming the board there are a few steps to complete. We need to perform some configurations in FreeRTOS library and USART module:
+
+-   Create a blank project and access the MPLAB Code Configurator (MCC). After the MCC loaded, please add the FreeRTOS Library.
+    <br><img src="images/freeRTOS_library.png" width="800">
+
+-   This example needs to have selected the TCB0 as Interface Timer as in the picture below.
+    <br><img src="images/freeRTOS_Kernel_configuration.PNG" width="600">
+
+-   Click on RTOS_UART and change it to the next configuration.
+    <br><img src="images/RTOS_UART_configuration.PNG" width="800">
+
+-   In the Libraries Support section of freeRTOS we need to select this Port Selector and update it to the same configuration present in RTOS_UART.
+    <br><img src="images/freeRTOS_Libraries_Support.PNG" width="800">
+
+-   Please go ahead and select the pins accordingly in the Pin Grid View.
+    <br><img src="images/freeRTOS_Pin_Grid.PNG" width="800">
+
+-   Last step is to modify the Custom name for the pin PB3 as in the picture below.
+    <br><img src="images/System_pins.PNG" width="800">
+
+
+## Demo
+
+After programming the board, there are a few commands that are supported in this project. To get some instructions about how to perform some actions it can be used the command help in the terminal as in the picture below.
+    <br><img src="images/terminal_demo.PNG" width="600">
+
+As it can be observed, those commands can provide information about the state of each FreeRTOS task, about the build info and so on.
+    <br><img src="images/terminal_commands.PNG" width="600">
+
+## How to Program the Curiosity Nano Board
+
+This chapter shows how to use the MPLAB X IDE to program an AVR® device with an `Example_Project.X`. This can be applied to any other projects.
+
+- Connect the board to the PC
+
+- Open the `Example_Project.X` project in MPLAB X IDE
+
+- Set the `Example_Project.X` project as main project
+
+  - Right click the project in the **Projects** tab and click **Set as Main Project**
+    <br><img src="images/Program_Set_as_Main_Project.png" width="600">
+
+- Clean and build the `Example_Project.X` project
+
+  - Right click the `Example_Project.X` project and select **Clean and Build**
+    <br><img src="images/Program_Clean_and_Build.png" width="600">
+
+- Select **AVRxxxxx Curiosity Nano** in the Connected Hardware Tool section of the project settings:
+
+  - Right click the project and click **Properties**
+  - Click the arrow under the Connected Hardware Tool
+  - Select the **AVRxxxxx Curiosity Nano** (click the **SN**), click **Apply** and then **OK**:
+    <br><img src="images/Program_Tool_Selection.png" width="600">
+
+- Program the project to the board
+  - Right click the project and then **Make and Program Device**
+    <br><img src="images/Program_Make_and_Program_Device.png" width="600">
+
+<br>
+
 
 ## Summary
 
-<!-- Summarize what the example has shown -->
+This repository contains the FreeRTOS CLI example and it demonstrates the capabilities of the library using the AVR128DA48 Curiosity Board. 
+
+## Menu
+
+- [Back to Top](#cli-example-using-avr-da-microcontroller-and-freertos-with-mcc-melody)
+- [Back to Related Documentation](#related-documentation)
+- [Back to Software Used](#software-used)
+- [Back to Operation](#operation)
+- [Back to Hardware Used](#hardware-used)
+- [Back to Setup](#setup)
+- [Back to Demo](#demo)
+- [Back to Summary](#summary)
+- [Back to How to Program the Curiosity Nano Board](#how-to-program-the-curiosity-nano-board)
