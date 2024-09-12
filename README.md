@@ -3,7 +3,7 @@
 # CLI Example Using AVR DA Microcontroller and FreeRTOS with MCC Melody
 
 
-This repository provides an FreeRTOS CLI example MPLAB® X project using MPLAB Code Configurator (MCC). The MCC Melody generated project offers a seamless integration of the FreeRTOS kernel files and port files, by providing a basic project structure that can be used as starting point for an RTOS application.
+This repository provides an FreeRTOS CLI example MPLAB® X project using MPLAB Code Configurator (MCC). The MCC Melody generated project offers a seamless integration of the FreeRTOS kernel files and port files, providing a basic project structure that can be used as starting point for an RTOS application.
 
 
 ## Related Documentation
@@ -36,12 +36,12 @@ To program the Curiosity Nano board with this MPLAB X project, follow the steps 
 
 ## Setup
 
-Before programming the board there are a few steps to complete. We need to perform some configurations in FreeRTOS library and USART module:
+Before programming the board there are few steps to complete. The following configurations in FreeRTOS library and USART module are required:
 
--   Create a blank project and access the MPLAB Code Configurator (MCC). After the MCC loaded, please add the FreeRTOS Library.
+-   Create a blank project and access the MCC. After the MCC is loaded, please add the FreeRTOS Library.
     <br><img src="images/freeRTOS_library.png" width="800">
 
--   This example needs to have selected the TCB0 as Interface Timer as in the picture below.
+-   This example needs to have selected the TCB0 as Interface Timer, as in the picture below.
     <br><img src="images/freeRTOS_Kernel_configuration.PNG" width="600">
 
 -   Click on RTOS_UART and change it to the next configuration.
@@ -50,16 +50,16 @@ Before programming the board there are a few steps to complete. We need to perfo
 -   In the Libraries Support section of freeRTOS we need to select this Port Selector and update it to the same configuration present in RTOS_UART.
     <br><img src="images/freeRTOS_Libraries_Support.PNG" width="800">
 
--   Please go ahead and select the pins accordingly in the Pin Grid View.
+-   Proceed by selecting the pins accordingly in the Pin Grid View.
     <br><img src="images/freeRTOS_Pin_Grid.PNG" width="800">
 
--   Last step is to modify the Custom name for the pin PB3 as in the picture below.
+-   Last step is to modify the Custom name for the pin PB3, as in the picture below.
     <br><img src="images/System_pins.PNG" width="800">
 
 
 ## Demo
 
-After programming the board, there are a few commands that are supported in this project. To get some instructions about how to perform some actions it can be used the command help in the terminal as in the picture below.
+After programming the board, there are a few commands that are supported in this project. To get instructions about how to perform some actions it can be used the command help in the terminal, as in the picture below.
     <br><img src="images/terminal_demo.PNG" width="600">
 
 As it can be observed, those commands can provide information about the state of each FreeRTOS task, about the build info and so on.
